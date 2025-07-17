@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perusahaan XYZ - Ekosistem Pendidikan Terapan</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Konfigurasi Tailwind CSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'xyz-blue-dark': '#0B2447',
+                        'xyz-blue': '#19376D',
+                        'xyz-blue-light': '#576CBC',
+                        'xyz-accent': '#A5D7E8',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Style untuk class 'active' pada navigasi */
+        .nav-link.active {
+            color: #A5D7E8;
+            font-weight: 700;
+        }
+        /* Style untuk section yang tidak aktif */
+        .page-section {
+            display: none;
+        }
+        /* Style untuk section yang aktif */
+        .page-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-inter text-gray-800">
+
+    <!-- Header & Navigasi -->
+    <header class="bg-xyz-blue-dark text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="flex items-center space-x-2 nav-link-header">
+                <!-- Logo SVG Topi Wisuda -->
+                <svg class="w-8 h-8 text-xyz-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L1 7.5V13.79C1 14.8 1.25 15.76 1.7 16.64L2.82 14.88C2.31 14.27 2.03 13.56 2.03 12.81V8.33L12 3.18L22 8.33V12.81C22 13.56 21.69 14.27 21.18 14.88L22.3 16.64C22.75 15.76 23 14.8 23 13.79V7.5L12 2Z" />
+                    <path d="M4.43 9.25L12 13.5L19.57 9.25L12 5L4.43 9.25ZM12 15.5L4 10.5V13.5L12 18.5L20 13.5V10.5L12 15.5Z" />
+                </svg>
+                <span class="text-2xl font-bold tracking-tight">XYZ</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link active hover:text-xyz-accent transition duration-300">Beranda</a>
+                <a href="#about" class="nav-link hover:text-xyz-accent transition duration-300">Tentang Kami</a>
+                <a href="#services" class="nav-link hover:text-xyz-accent transition duration-300">Layanan</a>
+                <a href="#contact" class="nav-link hover:text-xyz-accent transition duration-300">Kontak</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2 nav-link-mobile">Beranda</a>
+            <a href="#about" class="block py-2 nav-link-mobile">Tentang Kami</a>
+            <a href="#services" class="block py-2 nav-link-mobile">Layanan</a>
+            <a href="#contact" class="block py-2 nav-link-mobile">Kontak</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Halaman Beranda -->
+        <section id="home" class="page-section active">
+            <div class="relative h-[60vh] md:h-[80vh] bg-cover bg-center text-white" style="background-image: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=2574&auto=format&fit=crop');">
+                <div class="absolute inset-0 bg-xyz-blue-dark bg-opacity-70"></div>
+                <div class="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center">
+                    <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Mencetak Generasi Unggul dan Berdaya</h1>
+                    <p class="text-lg md:text-xl max-w-3xl mb-8">Ekosistem pendidikan terapan berbasis praktik nyata untuk pemberdayaan komunitas melalui keterampilan, literasi keuangan, dan teknologi digital.</p>
+                    <a href="#services" class="bg-xyz-accent text-xyz-blue-dark font-bold py-3 px-8 rounded-full hover:bg-white transition duration-300 text-lg">
+                        Pelajari Layanan Kami
+                    </a>
+                </div>
+            </div>
+            
+            <div class="bg-white py-16">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-3xl font-bold text-xyz-blue-dark mb-12">Keunggulan Utama Kami</h2>
+                    <div class="grid md:grid-cols-3 gap-10">
+                        <div class="p-6">
+                            <div class="flex justify-center mb-4">
+                                <svg class="w-16 h-16 text-xyz-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.085a2 2 0 00-1.736.97l-2.714 4.224a2 2 0 00.184 2.758l3.426 3.426a2 2 0 002.828 0l1.414-1.414a2 2 0 000-2.828z"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-xyz-blue-dark mb-2">Learning by Doing</h3>
+                            <p class="text-gray-600">Pendekatan pembelajaran aktif yang mendorong peserta untuk belajar dan berbuat secara langsung.</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-center mb-4">
+                                <svg class="w-16 h-16 text-xyz-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-xyz-blue-dark mb-2">Pemberdayaan Komunitas</h3>
+                            <p class="text-gray-600">Mengintegrasikan pelatihan, literasi keuangan, dan teknologi untuk memberdayakan masyarakat.</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-center mb-4">
+                                <svg class="w-16 h-16 text-xyz-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-xyz-blue-dark mb-2">Integrated Eco Farming</h3>
+                            <p class="text-gray-600">Sistem pertanian terpadu yang inovatif untuk memanfaatkan sampah organik secara berdaya guna.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Halaman Tentang Kami -->
+        <section id="about" class="page-section py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold text-xyz-blue-dark">Tentang Perusahaan XYZ</h2>
+                    <p class="mt-4 text-lg text-gray-600">Mengenal lebih dekat visi, misi, dan filosofi di balik inovasi kami.</p>
+                </div>
+
+                <!-- Latar Belakang & Misi -->
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                    <div class="prose max-w-none text-gray-700">
+                        <h3 class="text-2xl font-bold text-xyz-blue-dark mb-4">Latar Belakang</h3>
+                        <p>Perusahaan XYZ lahir dari keprihatinan terhadap krisis keterampilan di kalangan usia produktif dan ketergantungan masyarakat pada pola konsumsi. Di tengah tingginya angka pengangguran dan masalah sampah organik, XYZ hadir untuk menghadirkan solusi berbasis edukasi terapan dan pemberdayaan ekonomi masyarakat.</p>
+                        <h3 class="text-2xl font-bold text-xyz-blue-dark mt-8 mb-4">Visi & Misi</h3>
+                        <p>Misi utama perusahaan adalah mencetak generasi yang tidak hanya cerdas, tetapi juga unggul secara keterampilan, siap kerja, dan mampu menciptakan lapangan kerja dari rumah. Salah satu terobosannya adalah program <strong>Integrated Eco Farming</strong>, yaitu sistem pertanian terpadu yang memanfaatkan sampah organik secara lebih berdaya guna.</p>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop" alt="Tim XYZ berdiskusi" class="rounded-lg shadow-xl">
+                    </div>
+                </div>
+
+                <!-- Filosofi Logo -->
+                <div class="bg-white p-10 rounded-lg shadow-lg">
+                    <h3 class="text-3xl font-bold text-center text-xyz-blue-dark mb-10">Filosofi Logo Kami</h3>
+                    <div class="grid md:grid-cols-3 gap-8 text-center">
+                        <div>
+                            <div class="flex justify-center mb-4">
+                                <div class="w-20 h-20 bg-xyz-blue-dark rounded-full flex items-center justify-center">
+                                    <svg class="w-12 h-12 text-xyz-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 7.5V13.79C1 14.8 1.25 15.76 1.7 16.64L2.82 14.88C2.31 14.27 2.03 13.56 2.03 12.81V8.33L12 3.18L22 8.33V12.81C22 13.56 21.69 14.27 21.18 14.88L22.3 16.64C22.75 15.76 23 14.8 23 13.79V7.5L12 2Z" /><path d="M4.43 9.25L12 13.5L19.57 9.25L12 5L4.43 9.25ZM12 15.5L4 10.5V13.5L12 18.5L20 13.5V10.5L12 15.5Z" /></svg>
+                                </div>
+                            </div>
+                            <h4 class="text-xl font-bold text-xyz-blue mb-2">Simbol Utama</h4>
+                            <p class="text-gray-600">Ikon topi wisuda melambangkan pendidikan sebagai fondasi utama dan komitmen kami untuk mencetak SDM unggul.</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-center mb-4">
+                                 <div class="w-20 h-20 bg-xyz-blue-dark rounded-full flex items-center justify-center">
+                                    <svg class="w-12 h-12 text-xyz-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.572L16.5 21.75l-.398-1.178a3.375 3.375 0 00-2.455-2.456L12.75 18l1.178-.398a3.375 3.375 0 002.455-2.456L16.5 14.25l.398 1.178a3.375 3.375 0 002.456 2.456l1.178.398-1.178.398a3.375 3.375 0 00-2.456 2.456z" /></svg>
+                                </div>
+                            </div>
+                            <h4 class="text-xl font-bold text-xyz-blue mb-2">Nama & Warna</h4>
+                            <p class="text-gray-600">Nama "XYZ" mencerminkan profesionalisme. Warna biru melambangkan kepercayaan, kemajuan, dan pembaruan.</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-center mb-4">
+                                 <div class="w-20 h-20 bg-xyz-blue-dark rounded-full flex items-center justify-center">
+                                    <svg class="w-12 h-12 text-xyz-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" /></svg>
+                                </div>
+                            </div>
+                            <h4 class="text-xl font-bold text-xyz-blue mb-2">Desain Font</h4>
+                            <p class="text-gray-600">Font yang modern dan tegas menggambarkan kekuatan visi, semangat inovatif, dan struktur yang profesional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Halaman Layanan -->
+        <section id="services" class="page-section py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold text-xyz-blue-dark">Layanan Utama Kami</h2>
+                    <p class="mt-4 text-lg text-gray-600">Pelatihan dan produksi pakan ternak alternatif yang berkelanjutan dan bernilai ekonomis.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Card Layanan 1: Maggot -->
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1628799259663-8a46b863e41a?q=80&w=2574&auto=format&fit=crop" alt="Budidaya Maggot BSF" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-xyz-blue mb-3">Budidaya Maggot & Pakan Alternatif</h3>
+                            <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                                <li>Fokus pada budidaya <strong>Black Soldier Fly (BSF)</strong>.</li>
+                                <li>Menggunakan limbah dapur rumah tangga sebagai media budidaya.</li>
+                                <li>Menghasilkan maggot segar dan kering kaya protein untuk pakan unggas dan ikan.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Card Layanan 2: Cacing -->
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1599131641320-f4742a7813a1?q=80&w=2574&auto=format&fit=crop" alt="Budidaya Cacing Tanah" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-xyz-blue mb-3">Budidaya Cacing & Pakan Organik</h3>
+                            <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                                <li>Mengembangkan budidaya cacing untuk menghasilkan biomassa pakan ternak.</li>
+                                <li>Memanfaatkan limbah organik sebagai pakan cacing.</li>
+                                <li>Produk sampingan berupa <strong>kascing</strong> (pupuk organik berkualitas tinggi).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Card Layanan 3: Ulat Sutra -->
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/19376D/A5D7E8?text=Budidaya+Ulat+Sutra" alt="Budidaya Ulat Sutra" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/19376D/A5D7E8?text=Gambar+Ulat+Sutra';">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-xyz-blue mb-3">Budidaya Ulat Sutra & Pakan Alternatif</h3>
+                            <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                                <li>Budidaya ulat sutra jenis <strong>Samia ricini</strong> dengan pakan daun singkong.</li>
+                                <li>Panen kokon ulat sutra untuk kerajinan atau sumber protein.</li>
+                                <li>Limbah daun dari sisa pakan ulat diolah menjadi kompos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Halaman Kontak -->
+        <section id="contact" class="page-section py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold text-xyz-blue-dark">Hubungi Kami</h2>
+                    <p class="mt-4 text-lg text-gray-600">Kami siap berkolaborasi dan menjawab pertanyaan Anda.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Informasi Kontak & Peta -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-xyz-blue-dark mb-6">Informasi & Lokasi</h3>
+                        <div class="space-y-6 text-gray-700">
+                            <div class="flex items-start space-x-4">
+                                <svg class="w-6 h-6 text-xyz-blue-light mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                <div>
+                                    <h4 class="font-semibold">Kantor Pusat</h4>
+                                    <p>Jl. Maju Berkarya No. 123, Kota Semarang</p>
+                                    <h4 class="font-semibold mt-2">Workshop & Training Center</h4>
+                                    <p>Kawasan Industri Kreatif, Blok A5, Sukorejo, Kota Semarang</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <svg class="w-6 h-6 text-xyz-blue-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                <div>
+                                    <h4 class="font-semibold">Telepon</h4>
+                                    <p>(024) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <svg class="w-6 h-6 text-xyz-blue-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p>info@xyz-company.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 rounded-lg overflow-hidden shadow-lg">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63360.25779904257!2d110.3748396431945!3d-7.000345214643058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4ea17a8899%3A0x8290766d3419534!2sTugu%20Muda!5e0!3m2!1sen!2sid!4v1689606835234!5m2!1sen!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Formulir Kontak -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-xyz-blue-dark mb-6">Kirim Pesan</h3>
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-semibold mb-2">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-xyz-blue-light focus:border-xyz-blue-light" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-semibold mb-2">Alamat Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-xyz-blue-light focus:border-xyz-blue-light" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 font-semibold mb-2">Subjek</label>
+                                <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-xyz-blue-light focus:border-xyz-blue-light" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-semibold mb-2">Pesan Anda</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-xyz-blue-light focus:border-xyz-blue-light" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-xyz-blue text-white font-bold py-3 px-6 rounded-lg hover:bg-xyz-blue-dark transition duration-300">
+                                Kirim Pesan
+                            </button>
+                        </form>
+                        <div id="form-success-message" class="hidden mt-4 p-4 bg-green-100 text-green-800 border border-green-300 rounded-lg">
+                            Pesan Anda telah berhasil dikirim! Kami akan segera menghubungi Anda.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-xyz-blue-dark text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 Perusahaan XYZ. Semua Hak Cipta Dilindungi.</p>
+            <p class="text-sm text-xyz-blue-light mt-2">Dirancang untuk Pemberdayaan Komunitas.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
+            const headerLinks = document.querySelectorAll('.nav-link-header');
+            const sections = document.querySelectorAll('.page-section');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const contactForm = document.getElementById('contact-form');
+            const successMessage = document.getElementById('form-success-message');
+
+            // Fungsi untuk menampilkan halaman
+            function showPage(pageId) {
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                    if ('#' + section.id === pageId) {
+                        section.classList.add('active');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === pageId) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                // Tutup menu mobile setelah link diklik
+                mobileMenu.classList.add('hidden');
+            }
+
+            // Event listener untuk link navigasi
+            function addNavListener(links) {
+                links.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const pageId = this.getAttribute('href');
+                        showPage(pageId);
+                        window.scrollTo(0, 0); // Scroll ke atas halaman
+                    });
+                });
+            }
+
+            addNavListener(navLinks);
+            addNavListener(mobileNavLinks);
+            addNavListener(headerLinks);
+
+            // Toggle menu mobile
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Handle form submission
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Tampilkan pesan sukses
+                successMessage.classList.remove('hidden');
+                // Kosongkan form
+                contactForm.reset();
+                // Sembunyikan pesan setelah beberapa detik
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 5000);
+            });
+
+            // Inisialisasi halaman awal
+            showPage('#home');
+        });
+    </script>
+
+</body>
+</html>
